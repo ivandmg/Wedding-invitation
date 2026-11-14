@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --vino: #8b2e3f; --vino-dark: #5e1a28; --rosa: #f3e4e7; --crema: #fbf6f2;
+    --oro: #c9a46c; --ink: #2a2224; --muted: #7a6f71; --line: #e6dcdd;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: "DM Sans", sans-serif; color: var(--ink); }
+  .canvas {
+    position: relative; width: 1080px; height: 1080px; overflow: hidden;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(201,164,108,.25), transparent 40%),
+      radial-gradient(circle at 10% 95%, rgba(139,46,63,.18), transparent 45%),
+      var(--crema);
+    padding: 60px 64px;
+  }
+  .ring { position: absolute; border: 1.5px solid rgba(139,46,63,.15); border-radius: 50%; }
+  .confetti { position: absolute; border-radius: 3px; }
+
+  .eyebrow { font-size: 18px; letter-spacing: .35em; text-transform: uppercase; font-weight: 700; color: var(--vino); }
+  h1 {
+    font-family: "Playfair Display", serif; font-weight: 700; font-size: 66px; line-height: 1.03;
+    margin-top: 18px; width: 560px; letter-spacing: -.01em;
+  }
+  h1 em { font-style: italic; font-weight: 600; color: var(--vino); }
+  .sub { margin-top: 22px; font-size: 24px; line-height: 1.4; color: var(--muted); width: 520px; }
+  .sub strong { color: var(--ink); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; width: 560px; }
+  .chip {
+    padding: 12px 22px; border-radius: 999px; font-size: 21px; font-weight: 700;
+    background: #fff; border: 1.5px solid var(--line); box-shadow: 0 6px 16px rgba(42,34,36,.06);
+  }
+  .chip.dark { background: var(--vino); color: #fff; border-color: var(--vino); }
+
+  .features { margin-top: 28px; display: grid; gap: 11px; width: 540px; }
+  .feat { display: flex; align-items: center; gap: 16px; font-size: 22px; font-weight: 500; }
+  .feat .ic {
+    flex: none; width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center;
+    background: var(--rosa); color: var(--vino);
+  }
+  .feat svg { width: 24px; height: 24px; }
+
+  .cta {
+    position: absolute; left: 64px; bottom: 64px; right: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--vino); color: #fff; border-radius: 26px; padding: 26px 34px;
+    box-shadow: 0 18px 40px rgba(139,46,63,.35);
+  }
+  .cta .big { font-family: "Playfair Display", serif; font-size: 36px; font-weight: 700; }
+  .cta .small { font-size: 19px; opacity: .85; margin-top: 4px; }
+  .cta .btn {
+    background: #fff; color: var(--vino); font-weight: 700; font-size: 20px; letter-spacing: .12em;
+    text-transform: uppercase; padding: 18px 28px; border-radius: 14px;
+  }
+
+  /* Teléfono */
+  .phone {
+    position: absolute; right: 62px; top: 120px; width: 380px; height: 740px;
+    background: #1d1416; border-radius: 56px; padding: 14px;
+    box-shadow: 0 40px 80px rgba(42,34,36,.35), inset 0 0 0 2px #3a2a2d;
+    transform: rotate(4deg);
+  }
+  .screen {
+    position: relative; width: 100%; height: 100%; border-radius: 44px; overflow: hidden;
+    background: linear-gradient(180deg, #fff 0%, var(--crema) 100%);
+    padding: 64px 26px 26px; text-align: center;
+  }
+  .notch { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 110px; height: 30px; background: #1d1416; border-radius: 20px; }
+  .s-eyebrow { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+  .s-bar { height: 2px; background: var(--line); margin: 14px 10px 0; position: relative; }
+  .s-bar::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 20%; background: var(--vino); }
+  .s-card {
+    margin-top: 24px; background: #fff; border: 1px solid var(--line); border-radius: 24px;
+    padding: 30px 18px 26px; position: relative; height: 470px;
+    box-shadow: 0 14px 30px rgba(42,34,36,.08);
+  }
+  .s-icon {
+    width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 50%; border: 1.5px solid var(--ink);
+    box-shadow: 0 0 0 5px #fff, 0 0 0 6px var(--line); display: grid; place-items: center; font-size: 26px;
+  }
+  .s-label { font-size: 11px; letter-spacing: .3em; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+  .s-q { font-family: "Playfair Display", serif; font-weight: 700; font-size: 34px; line-height: 1.1; margin-top: 12px; }
+  .s-yes {
+    position: absolute; left: 36px; top: 300px; width: 150px; padding: 18px 0; border-radius: 12px;
+    background: var(--vino); color: #fff; font-weight: 700; letter-spacing: .2em; font-size: 15px;
+    box-shadow: 0 10px 22px rgba(139,46,63,.35); transform: scale(1.12);
+  }
+  .s-no {
+    position: absolute; right: 14px; top: 380px; width: 110px; padding: 14px 0; border-radius: 12px;
+    background: #fff; border: 1px solid var(--line); font-weight: 700; letter-spacing: .2em; font-size: 13px;
+    transform: rotate(-8deg);
+  }
+  .ghost { position: absolute; border: 1.5px dashed rgba(139,46,63,.35); border-radius: 12px; }
+  .trail { position: absolute; height: 0; border-top: 2px dashed rgba(139,46,63,.35); transform-origin: left center; }
+  .cursor { position: absolute; width: 34px; height: 34px; }
+  .s-hint { position: absolute; left: 0; right: 0; bottom: 22px; font-size: 14px; font-style: italic; color: var(--muted); }
+
+  .note {
+    position: absolute; right: 26px; top: 86px; width: 74px; height: 74px; border-radius: 50%;
+    background: var(--oro); color: #fff; display: grid; place-items: center;
+    box-shadow: 0 12px 26px rgba(201,164,108,.5); transform: rotate(-8deg);
+  }
+  .note svg { width: 34px; height: 34px; }
+  .bubble {
+    position: absolute; right: 236px; top: 770px; background: #fff; border: 1.5px solid var(--line);
+    border-radius: 18px; padding: 14px 18px; font-size: 18px; font-weight: 700; color: var(--vino);
+    box-shadow: 0 12px 26px rgba(42,34,36,.1); transform: rotate(-4deg);
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="ring" style="width:520px;height:520px;right:-160px;top:-170px"></div>
+  <div class="ring" style="width:300px;height:300px;right:-60px;top:-60px"></div>
+
+  <div class="confetti" style="width:14px;height:20px;background:var(--oro);left:610px;top:90px;transform:rotate(25deg)"></div>
+  <div class="confetti" style="width:10px;height:16px;background:#d97a8c;left:660px;top:40px;transform:rotate(-20deg)"></div>
+  <div class="confetti" style="width:12px;height:18px;background:var(--oro);left:1030px;top:600px;transform:rotate(40deg)"></div>
+  <div class="confetti" style="width:10px;height:10px;border-radius:50%;background:#d97a8c;left:1000px;top:540px"></div>
+
+  <p class="eyebrow">Invitaciones digitales</p>
+  <h1>Invitaciones que tus invitados <em>no van a olvidar</em></h1>
+  <p class="sub"><strong>100% personalizadas</strong> para cualquier evento. Tú lo imaginas, yo lo hago realidad.</p>
+
+  <div class="chips">
+    <span class="chip dark">Bodas</span>
+    <span class="chip">Cumpleaños</span>
+    <span class="chip">Fiestas</span>
+    <span class="chip">XV años</span>
+    <span class="chip">Baby shower</span>
+    <span class="chip">¡Lo que sea!</span>
+  </div>
+
+  <div class="features">
+    <div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9l10.5 4.2-4.3 1.5-1.5 4.3z"/><path d="M5 3v3M3 5h3M9.5 3.5l-1 2M3.5 9.5l2-1"/></svg></span>Botones interactivos y divertidos</div>
+    <div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>Música de fondo a tu elección</div>
+    <div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><path d="M12 17h.01"/></svg></span>Cuestionarios personalizados</div>
+    <div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-8 8"/></svg></span>Fotos, cuenta regresiva y ubicación</div>
+    <div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Confirmación de asistencia por WhatsApp</div>
+  </div>
+
+  <!-- Teléfono -->
+  <div class="phone">
+    <div class="screen">
+      <div class="notch"></div>
+      <p class="s-eyebrow">· Una pequeña invitación ·</p>
+      <div class="s-bar"></div>
+      <div class="s-card">
+        <div class="s-icon">◡</div>
+        <p class="s-label">Reserva la fecha</p>
+        <p class="s-q">¿Quieres venir a mi fiesta?</p>
+        <div class="ghost" style="left:196px;top:300px;width:110px;height:50px"></div>
+        <div class="trail" style="left:250px;top:352px;width:62px;transform:rotate(55deg)"></div>
+        <div class="s-yes">SÍ</div>
+        <div class="s-no">NO</div>
+        <svg class="cursor" style="left:200px;top:330px" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#2a2224" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <p class="s-hint">Ese botón es decorativo 😏</p>
+      </div>
+    </div>
+  </div>
+  <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+  <div class="bubble">¡El "No" se escapa!</div>
+
+  <div class="cta">
+    <div>
+      <p class="big">Pide la tuya hoy</p>
+      <p class="small">Envíame un mensaje y la diseñamos juntos</p>
+    </div>
+    <span class="btn">Escríbeme</span>
+  </div>
+</div>
+</body>
+</html>
