@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nuestra Boda</title>
+  <meta name="description" content="Estás invitado a nuestra boda." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ SOBRE / PORTADA DE ENTRADA ============ -->
+  <div id="sobre" class="sobre">
+    <div class="sobre-inner">
+      <p class="eyebrow">· Una pequeña invitación ·</p>
+      <div class="sello"><span data-iniciales></span></div>
+      <h2 class="sobre-nombres" data-nombres></h2>
+      <button id="abrir" class="btn btn-primary">Abrir invitación</button>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="inicio">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-content">
+      <p class="eyebrow light">Nos casamos</p>
+      <h1 class="hero-names"><span data-novia></span> <em>&amp;</em> <span data-novio></span></h1>
+      <p class="hero-date" data-fecha-texto></p>
+      <p class="hero-quote" data-frase></p>
+      <div class="countdown" id="countdown">
+        <div><span id="cd-d">0</span><small>Días</small></div>
+        <div><span id="cd-h">0</span><small>Horas</small></div>
+        <div><span id="cd-m">0</span><small>Min</small></div>
+        <div><span id="cd-s">0</span><small>Seg</small></div>
+      </div>
+      <a href="#confirmar" class="btn btn-light">Confirmar asistencia</a>
+    </div>
+    <a href="#historia" class="scroll-hint" aria-label="Bajar">⌄</a>
+  </header>
+
+  <nav class="nav">
+    <a href="#historia">Historia</a>
+    <a href="#galeria">Fotos</a>
+    <a href="#detalles">Detalles</a>
+    <a href="#regalos">Regalos</a>
+    <a href="#confirmar" class="nav-cta">Confirmar</a>
+  </nav>
+
+  <main>
+    <!-- ============ HISTORIA ============ -->
+    <section id="historia" class="section">
+      <p class="eyebrow">Nuestra historia</p>
+      <h2 class="title">Cómo llegamos hasta aquí</h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section id="galeria" class="section section-alt">
+      <p class="eyebrow">Galería</p>
+      <h2 class="title">Momentos juntos</h2>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <!-- ============ DETALLES ============ -->
+    <section id="detalles" class="section">
+      <p class="eyebrow">Cuándo y dónde</p>
+      <h2 class="title">Detalles del evento</h2>
+      <div class="cards">
+        <article class="card" id="card-ceremonia"></article>
+        <article class="card" id="card-recepcion"></article>
+      </div>
+
+      <h3 class="subtitle">Itinerario</h3>
+      <ul class="itinerary" id="itinerary"></ul>
+
+      <div class="dress">
+        <p class="eyebrow">Código de vestimenta</p>
+        <p data-vestimenta></p>
+      </div>
+    </section>
+
+    <!-- ============ REGALOS ============ -->
+    <section id="regalos" class="section section-alt">
+      <p class="eyebrow">Mesa de regalos</p>
+      <h2 class="title">Un detalle con nosotros</h2>
+      <p class="lead" data-regalos-texto></p>
+      <div class="cards gifts" id="gifts"></div>
+    </section>
+
+    <!-- ============ CONFIRMAR (CUESTIONARIO) ============ -->
+    <section id="confirmar" class="section quiz-section">
+      <p class="eyebrow">· Una pequeña invitación ·</p>
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar"><span id="progressFill"></span></div>
+        <div class="quiz-progress-labels">
+          <span id="progressLeft">Confirma tu asistencia</span>
+          <span id="progressRight">Responde con sinceridad</span>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="quizCard">
+        <!-- El contenido se genera desde script.js -->
+      </div>
+
+      <p class="quiz-footer">Con amor y expectativas sospechosamente altas</p>
+      <p class="deadline">Por favor confirma antes del <strong data-confirmar-antes></strong></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-names"><span data-novia></span> &amp; <span data-novio></span></p>
+    <p data-fecha-texto></p>
+    <p class="small">Te esperamos ♥</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
