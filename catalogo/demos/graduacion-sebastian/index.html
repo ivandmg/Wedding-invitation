@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Graduación · Sebastián Rojas</title>
+<meta name="description" content="Invitación de graduación de ejemplo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../motor/invitacion.css">
+<style>
+:root {
+  --bg: #0f1a2e;
+  --surface: #16243d;
+  --ink: #eef1f6;
+  --muted: #9fb0c8;
+  --accent: #d4af6a;
+  --accent-ink: #0f1a2e;
+  --soft: #1c2c48;
+  --line: #2a3c5c;
+  --hero-bg: #0f1a2e;
+  --hero-ink: #eef1f6;
+  --font-display: 'Bodoni Moda', Georgia, serif;
+  --font-script: 'Bodoni Moda', Georgia, serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+}
+.hero h1 em { font-style: italic; } .quiz-card, .tarjeta, .bienvenida { box-shadow: none; }
+</style>
+</head>
+<body>
+<script>
+/* ====== DATOS DE LA INVITACIÓN (edita aquí) ====== */
+window.INV = {
+  "nombres": "Sebastián Rojas",
+  "iniciales": "SR",
+  "fecha": "2027-12-10T19:00",
+  "fechaTexto": "Viernes 10 de diciembre de 2027",
+  "tituloCalendario": "Graduación de Sebastián Rojas",
+  "hero": {
+    "pre": "Promoción 2027 · Ingeniería Civil",
+    "tituloHTML": "Sebastián <em class='amp'>Rojas</em>",
+    "sub": "¡Lo logré! Y quiero celebrarlo contigo"
+  },
+  "arte": {
+    "tipo": "geometrico",
+    "colores": [
+      "#d4af6a",
+      "#3b5a8c",
+      "#ffffff"
+    ]
+  },
+  "agendar": true,
+  "sobre": {
+    "texto": "Invitación de graduación"
+  },
+  "mensaje": {
+    "etiqueta": "Gracias",
+    "texto": "“Cinco años, muchas noches sin dormir y una familia que nunca dejó de creer en mí.”"
+  },
+  "eventos": [
+    {
+      "tipo": "Acto de colación",
+      "icono": "birrete",
+      "lugar": "Auditorio Central UMSA",
+      "hora": "7:00 PM",
+      "direccion": "Av. Villazón 1995, La Paz",
+      "inicio": "2027-12-10T19:00",
+      "duracionHoras": 2
+    },
+    {
+      "tipo": "Cena de celebración",
+      "icono": "copa",
+      "lugar": "Restaurante Mirador 360",
+      "hora": "9:30 PM",
+      "direccion": "Calle 21 de Calacoto, La Paz",
+      "inicio": "2027-12-10T21:30",
+      "duracionHoras": 4
+    }
+  ],
+  "itinerario": [
+    {
+      "hora": "7:00 PM",
+      "evento": "Acto de colación"
+    },
+    {
+      "hora": "9:00 PM",
+      "evento": "Fotos con la familia"
+    },
+    {
+      "hora": "9:30 PM",
+      "evento": "Cena y brindis"
+    },
+    {
+      "hora": "11:00 PM",
+      "evento": "Fiesta"
+    }
+  ],
+  "vestimenta": {
+    "tipo": "Formal",
+    "texto": "Traje oscuro o vestido de cóctel.",
+    "colores": [
+      "#0f1a2e",
+      "#d4af6a",
+      "#6b7c95"
+    ]
+  },
+  "confirmar": {
+    "limite": "1 de diciembre de 2027",
+    "whatsapp": "59165060795",
+    "maxPersonas": 3
+  },
+  "confeti": [
+    "#d4af6a",
+    "#ffffff",
+    "#3b5a8c"
+  ],
+  "pie": "¡Nos vemos para celebrar!",
+  "credito": {
+    "marca": "Brindis · Invitaciones web",
+    "link": "../../index.html"
+  },
+  "demo": {
+    "texto": "Invitación de ejemplo · datos inventados",
+    "volver": "../../index.html#disenos"
+  }
+};
+</script>
+<script src="../motor/invitacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El cumple de Tomás</title>
+<meta name="description" content="Invitación de cumpleaños infantil de ejemplo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="../motor/invitacion.css">
+<style>
+:root {
+  --bg: #fffaf0;
+  --surface: #ffffff;
+  --ink: #2b2a3d;
+  --muted: #6b6880;
+  --accent: #ff6b4a;
+  --accent-ink: #ffffff;
+  --soft: #fff0d6;
+  --line: #f3e2c4;
+  --hero-bg: #fff3dd;
+  --hero-ink: #2b2a3d;
+  --font-display: 'Baloo 2', system-ui, sans-serif;
+  --font-script: 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+  --radius: 24px;
+}
+.hero h1 { font-weight: 800; } .hero h1 .amp { display:block; font-size:.5em; } .titulo { font-weight: 800; } .sello { font-family: var(--font-display); font-weight: 800; font-size: 3rem; }
+</style>
+</head>
+<body>
+<script>
+/* ====== DATOS DE LA INVITACIÓN (edita aquí) ====== */
+window.INV = {
+  "nombres": "Tomás",
+  "iniciales": "5",
+  "fecha": "2027-05-08T15:00",
+  "fechaTexto": "Sábado 8 de mayo · 3:00 PM",
+  "tituloCalendario": "Cumpleaños de Tomás",
+  "hero": {
+    "pre": "¡Estás invitado!",
+    "tituloHTML": "Tomás <span class='amp'>cumple 5</span>",
+    "sub": "Fiesta de dinosaurios 🦖",
+    "boton": "¡Quiero ir!"
+  },
+  "arte": {
+    "tipo": "globos",
+    "colores": [
+      "#ff6b4a",
+      "#4ab3ff",
+      "#ffc93c"
+    ]
+  },
+  "agendar": true,
+  "sobre": {
+    "texto": "Tienes una invitación"
+  },
+  "eventos": [
+    {
+      "tipo": "La fiesta",
+      "icono": "pastel",
+      "lugar": "Salón Mundo Feliz",
+      "hora": "3:00 PM a 7:00 PM",
+      "direccion": "Av. Banzer 3er anillo, Santa Cruz",
+      "inicio": "2027-05-08T15:00",
+      "duracionHoras": 4
+    }
+  ],
+  "itinerario": [
+    {
+      "hora": "3:00 PM",
+      "evento": "Juegos inflables"
+    },
+    {
+      "hora": "4:00 PM",
+      "evento": "Show de dinosaurios"
+    },
+    {
+      "hora": "5:00 PM",
+      "evento": "Piñata"
+    },
+    {
+      "hora": "5:30 PM",
+      "evento": "Torta y cumpleaños feliz"
+    }
+  ],
+  "vestimenta": {
+    "tipo": "¡Disfraz opcional!",
+    "texto": "Si quieres, ven disfrazado de dinosaurio o explorador. 🦕"
+  },
+  "compartirFotos": {
+    "texto": "Papás: compartan aquí las fotos de la fiesta.",
+    "link": "#"
+  },
+  "confirmar": {
+    "etiqueta": "Confirma si vienes",
+    "limite": "1 de mayo",
+    "whatsapp": "59165060795",
+    "camposExtra": [
+      "Nombre del papá o mamá"
+    ],
+    "textoGracias": "¡Te esperamos para jugar!",
+    "frasesNo": [
+      "¡Ese botón es de mentira! 🦖",
+      "¡Rawr! No se puede.",
+      "Tomás dice que tienes que venir.",
+      "¡Hay torta! Piénsalo mejor."
+    ],
+    "cuestionario": {
+      "pregunta": "¿Vienes a mi cumple? 🎈",
+      "preguntas": [
+        {
+          "q": "¿Cuál es tu dinosaurio favorito? 🦕",
+          "opciones": [
+            "T-Rex",
+            "Triceratops",
+            "Velociraptor",
+            "Diplodocus",
+            "¡Todos!"
+          ]
+        },
+        {
+          "q": "¿Qué vas a hacer en la fiesta? 🎉",
+          "opciones": [
+            "Saltar en los inflables",
+            "Romper la piñata",
+            "Comer torta",
+            "Bailar",
+            "¡Todo!"
+          ]
+        }
+      ]
+    }
+  },
+  "confeti": [
+    "#ff6b4a",
+    "#4ab3ff",
+    "#ffc93c",
+    "#7ed957"
+  ],
+  "pie": "¡Gracias por venir!",
+  "credito": {
+    "marca": "Brindis · Invitaciones web",
+    "link": "../../index.html"
+  },
+  "demo": {
+    "texto": "Invitación de ejemplo · datos inventados",
+    "volver": "../../index.html#disenos"
+  }
+};
+</script>
+<script src="../motor/invitacion.js"></script>
+</body>
+</html>

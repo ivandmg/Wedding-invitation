@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mis XV · Isabella</title>
+<meta name="description" content="Invitación de XV años de ejemplo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../motor/invitacion.css">
+<style>
+:root {
+  --bg: #fbf3f2;
+  --surface: #ffffff;
+  --ink: #3a2630;
+  --muted: #8a6f78;
+  --accent: #b5577a;
+  --accent-ink: #ffffff;
+  --soft: #f6e1e6;
+  --line: #efd3da;
+  --hero-bg: radial-gradient(circle at 50% 30%, #fff 0%, #f8dfe5 55%, #eec3cf 100%);
+  --hero-ink: #3a2630;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-body: 'Montserrat', system-ui, sans-serif;
+}
+
+</style>
+</head>
+<body>
+<script>
+/* ====== DATOS DE LA INVITACIÓN (edita aquí) ====== */
+window.INV = {
+  "nombres": "Isabella",
+  "iniciales": "XV",
+  "fecha": "2027-08-14T20:00",
+  "fechaTexto": "Sábado 14 de agosto de 2027",
+  "tituloCalendario": "Mis XV · Isabella",
+  "hero": {
+    "pre": "Mis XV años",
+    "tituloHTML": "Isabella",
+    "sub": "Un sueño hecho realidad",
+    "boton": "¿Vienes a mi fiesta?"
+  },
+  "arte": {
+    "tipo": "estrellas",
+    "colores": [
+      "#d9a5b3",
+      "#c9a46c",
+      "#ffffff"
+    ]
+  },
+  "menu": true,
+  "agendar": true,
+  "pase": true,
+  "musica": {
+    "youtube": "JvNQLJ1_HQ0",
+    "inicio": 0
+  },
+  "sobre": {
+    "texto": "Estás invitado(a) a mis XV"
+  },
+  "textoBienvenida": "Me encantaría que me acompañes en una de las noches más especiales de mi vida.",
+  "mensaje": {
+    "etiqueta": "Con amor",
+    "texto": "“Hay momentos que se viven una sola vez. Quiero vivir este contigo.”",
+    "personas": [
+      {
+        "rol": "Mis padres",
+        "nombres": [
+          "Carlos Méndez",
+          "Lorena Vaca"
+        ]
+      },
+      {
+        "rol": "Mis padrinos",
+        "nombres": [
+          "Andrés Rojas",
+          "Silvia Paredes"
+        ]
+      }
+    ]
+  },
+  "galeria": {
+    "titulo": "Sesión de fotos",
+    "vacias": 6
+  },
+  "eventos": [
+    {
+      "tipo": "Misa de acción de gracias",
+      "icono": "iglesia",
+      "lugar": "Capilla Santa Rosa",
+      "hora": "7:00 PM",
+      "direccion": "Calle Sucre 45, Cochabamba",
+      "inicio": "2027-08-14T19:00",
+      "duracionHoras": 1
+    },
+    {
+      "tipo": "Fiesta",
+      "icono": "corona",
+      "lugar": "Salón Cristal",
+      "hora": "8:30 PM",
+      "direccion": "Av. América 880, Cochabamba",
+      "inicio": "2027-08-14T20:30",
+      "duracionHoras": 6
+    }
+  ],
+  "itinerario": [
+    {
+      "hora": "8:30 PM",
+      "evento": "Recepción de invitados"
+    },
+    {
+      "hora": "9:00 PM",
+      "evento": "Entrada de la quinceañera"
+    },
+    {
+      "hora": "9:15 PM",
+      "evento": "Vals con papá y chambelanes"
+    },
+    {
+      "hora": "9:45 PM",
+      "evento": "Brindis y cena"
+    },
+    {
+      "hora": "10:30 PM",
+      "evento": "Baile sorpresa"
+    },
+    {
+      "hora": "11:00 PM",
+      "evento": "¡A bailar!"
+    }
+  ],
+  "vestimenta": {
+    "tipo": "Gala",
+    "texto": "Vestido largo y traje oscuro.",
+    "colores": [
+      "#c9a46c",
+      "#3a2630",
+      "#8a6f78",
+      "#e9e3dc"
+    ],
+    "nota": "El rosa está reservado para la quinceañera."
+  },
+  "regalos": {
+    "titulo": "Lluvia de sobres",
+    "texto": "Habrá un cofre especial en la fiesta para tus buenos deseos.",
+    "opciones": [
+      {
+        "icono": "regalo",
+        "nombre": "Lluvia de sobres",
+        "detalle": "El día de la fiesta, en el cofre de la entrada."
+      },
+      {
+        "icono": "qr",
+        "nombre": "Transferencia",
+        "detalle": "También puedes usar este QR.",
+        "qrTexto": "Ejemplo de QR para regalo"
+      }
+    ]
+  },
+  "compartirFotos": {
+    "texto": "¡Comparte tus fotos de la noche!",
+    "hashtag": "#LosXVdeIsa",
+    "link": "#"
+  },
+  "confirmar": {
+    "limite": "30 de julio de 2027",
+    "whatsapp": "59165060795",
+    "cuestionario": {
+      "pregunta": "¿Vienes a mis XV? 👑",
+      "preguntas": [
+        {
+          "q": "¿Vas a bailar toda la noche? 💃",
+          "opciones": [
+            "Hasta que cierren",
+            "Solo el vals",
+            "Si ponen reggaetón, sí",
+            "Yo vengo a comer",
+            "Depende de quién me saque"
+          ]
+        },
+        {
+          "q": "¿Qué vas a llevar puesto? 👗",
+          "opciones": [
+            "Algo rosado",
+            "Dorado brillante",
+            "Negro elegante",
+            "Lo primero que encuentre",
+            "Lo que Isa me diga"
+          ],
+          "trampa": {
+            "opcion": 0,
+            "titulo": "❌ Rosado",
+            "texto": "¡El rosa es SOLO para la quinceañera! Inténtalo de nuevo."
+          },
+          "comentarios": [
+            null,
+            "¡Vas a brillar! ✨",
+            "Clásico y elegante. 🖤",
+            "Valiente… pero aprobado. 😅",
+            "Respuesta correcta. 👑"
+          ]
+        }
+      ]
+    }
+  },
+  "confeti": [
+    "#b5577a",
+    "#c9a46c",
+    "#ffffff"
+  ],
+  "pie": "¡Te espero!",
+  "credito": {
+    "marca": "Brindis · Invitaciones web",
+    "link": "../../index.html"
+  },
+  "demo": {
+    "texto": "Invitación de ejemplo · datos inventados",
+    "volver": "../../index.html#disenos"
+  }
+};
+</script>
+<script src="../motor/invitacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Valeria & Mateo</title>
+<meta name="description" content="Invitación de boda de ejemplo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Jost:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../motor/invitacion.css">
+<style>
+:root {
+  --bg: #f7f4ec;
+  --surface: #fffdf8;
+  --ink: #2f3327;
+  --muted: #6f735f;
+  --accent: #5f6f4a;
+  --accent-ink: #fffdf8;
+  --soft: #ebeadb;
+  --line: #dcdac7;
+  --hero-bg: #f7f4ec;
+  --hero-ink: #2f3327;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Pinyon Script', cursive;
+  --font-body: 'Jost', system-ui, sans-serif;
+}
+
+</style>
+</head>
+<body>
+<script>
+/* ====== DATOS DE LA INVITACIÓN (edita aquí) ====== */
+window.INV = {
+  "nombres": "Valeria & Mateo",
+  "iniciales": "V&M",
+  "fecha": "2027-06-19T16:00",
+  "fechaTexto": "Sábado 19 de junio de 2027",
+  "tituloCalendario": "Boda de Valeria & Mateo",
+  "hero": {
+    "pre": "Nos casamos",
+    "tituloHTML": "Valeria <span class='amp'>&amp;</span> Mateo",
+    "sub": "Y queremos celebrarlo contigo"
+  },
+  "arte": {
+    "tipo": "floral",
+    "colores": [
+      "#7d8c63",
+      "#a9b48f",
+      "#e7d9c0"
+    ]
+  },
+  "menu": true,
+  "agendar": true,
+  "pase": true,
+  "musica": {
+    "youtube": "JvNQLJ1_HQ0",
+    "inicio": 0
+  },
+  "sobre": {
+    "texto": "Una pequeña invitación"
+  },
+  "textoBienvenida": "Hemos reservado un lugar especial para ustedes en nuestra boda.",
+  "mensaje": {
+    "etiqueta": "Con la bendición de",
+    "texto": "“El amor no se mira, se siente; y más aún cuando está a tu lado.”",
+    "personas": [
+      {
+        "rol": "Padres de la novia",
+        "nombres": [
+          "Ricardo Salazar",
+          "Mónica Rivero"
+        ]
+      },
+      {
+        "rol": "Padres del novio",
+        "nombres": [
+          "Jorge Antelo",
+          "Patricia Suárez"
+        ]
+      }
+    ]
+  },
+  "historia": {
+    "titulo": "Cómo empezó todo",
+    "items": [
+      {
+        "anio": "2018",
+        "titulo": "Nos conocimos",
+        "texto": "En la universidad, haciendo un trabajo en grupo que ninguno quería hacer."
+      },
+      {
+        "anio": "2020",
+        "titulo": "Primer viaje",
+        "texto": "Samaipata, una carpa y mucha lluvia. Ahí supimos que era en serio."
+      },
+      {
+        "anio": "2026",
+        "titulo": "La propuesta",
+        "texto": "Al atardecer, frente al lago. Ella dijo que sí antes de que él terminara la frase."
+      }
+    ]
+  },
+  "galeria": {
+    "titulo": "Nuestros momentos",
+    "vacias": 6
+  },
+  "eventos": [
+    {
+      "tipo": "Ceremonia religiosa",
+      "icono": "iglesia",
+      "lugar": "Parroquia San Rafael",
+      "hora": "4:00 PM",
+      "direccion": "Av. Las Palmas 120, Santa Cruz",
+      "inicio": "2027-06-19T16:00",
+      "duracionHoras": 1
+    },
+    {
+      "tipo": "Recepción",
+      "icono": "copa",
+      "lugar": "Jardín Los Almendros",
+      "hora": "6:30 PM",
+      "direccion": "Km 9 carretera al Norte, Santa Cruz",
+      "inicio": "2027-06-19T18:30",
+      "duracionHoras": 7
+    }
+  ],
+  "itinerario": [
+    {
+      "hora": "4:00 PM",
+      "evento": "Ceremonia religiosa"
+    },
+    {
+      "hora": "6:30 PM",
+      "evento": "Cóctel de bienvenida"
+    },
+    {
+      "hora": "7:30 PM",
+      "evento": "Entrada de los novios"
+    },
+    {
+      "hora": "8:00 PM",
+      "evento": "Cena"
+    },
+    {
+      "hora": "9:30 PM",
+      "evento": "Primer baile y vals"
+    },
+    {
+      "hora": "10:00 PM",
+      "evento": "¡Fiesta!"
+    }
+  ],
+  "vestimenta": {
+    "tipo": "Formal",
+    "texto": "Te sugerimos tonos tierra, verdes y neutros.",
+    "colores": [
+      "#5f6f4a",
+      "#a9b48f",
+      "#c8a97e",
+      "#8b6f5a",
+      "#2f3327"
+    ],
+    "nota": "El color blanco está reservado para la novia."
+  },
+  "regalos": {
+    "titulo": "Mesa de regalos",
+    "texto": "Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros:",
+    "opciones": [
+      {
+        "icono": "regalo",
+        "nombre": "Lista de regalos",
+        "detalle": "Tienda Casa Bella, a nombre de Valeria & Mateo."
+      },
+      {
+        "icono": "qr",
+        "nombre": "Regalo en efectivo",
+        "detalle": "Escanea el QR desde la app de tu banco.",
+        "qrTexto": "Ejemplo de QR para regalo en efectivo",
+        "cuenta": "1234567890"
+      }
+    ]
+  },
+  "hospedaje": [
+    {
+      "nombre": "Hotel Cielo Alto",
+      "estrellas": 4,
+      "detalle": "A 10 minutos del salón. Tarifa especial para invitados.",
+      "codigo": "BODAVM",
+      "ciudad": "Santa Cruz"
+    },
+    {
+      "nombre": "Casa Jardín Suites",
+      "estrellas": 3,
+      "detalle": "Opción económica, a 15 minutos.",
+      "ciudad": "Santa Cruz"
+    }
+  ],
+  "compartirFotos": {
+    "texto": "Sube tus fotos y videos de la boda a nuestro álbum compartido.",
+    "hashtag": "#ValeYMateoParaSiempre",
+    "link": "#"
+  },
+  "confirmar": {
+    "limite": "1 de mayo de 2027",
+    "whatsapp": "59165060795",
+    "camposExtra": [
+      "Alergias o restricciones"
+    ],
+    "cuestionario": {
+      "pregunta": "¿Quieres venir a nuestra boda? 💍",
+      "preguntas": [
+        {
+          "q": "¿Qué tanto te emociona nuestra boda? 💌",
+          "opciones": [
+            "¡¡Muchísimo!!",
+            "No puedo esperar",
+            "Lo que más me emociona es la comida",
+            "¿Habrá barra libre?",
+            "Se me olvidó que se casaban."
+          ]
+        },
+        {
+          "q": "¿Vas a llorar en la ceremonia? 🥹",
+          "opciones": [
+            "Obviamente",
+            "A mares",
+            "Intentaré contenerme",
+            "Solo si los demás lloran",
+            "No ❤️"
+          ]
+        },
+        {
+          "q": "¿De qué color será tu ropa? 👗",
+          "opciones": [
+            "Blanco",
+            "Verde oliva",
+            "Negro",
+            "Rosa intenso",
+            "Del color que ustedes digan"
+          ],
+          "trampa": {
+            "opcion": 0,
+            "titulo": "❌ Vestido blanco",
+            "texto": "Tu invitación queda cancelada. ¡¿Blanco?! ¡¿En NUESTRA boda?!"
+          },
+          "comentarios": [
+            null,
+            "Combinas con la decoración. 🌿",
+            "Elegante, sin dramas. 🖤",
+            "Vas a brillar en la pista. 💖",
+            "Respuesta perfecta. 🥹"
+          ]
+        }
+      ]
+    }
+  },
+  "confeti": [
+    "#5f6f4a",
+    "#c8a97e",
+    "#ffffff"
+  ],
+  "pie": "Gracias por ser parte de nuestra historia",
+  "credito": {
+    "marca": "Brindis · Invitaciones web",
+    "link": "../../index.html"
+  },
+  "demo": {
+    "texto": "Invitación de ejemplo · datos inventados",
+    "volver": "../../index.html#disenos"
+  }
+};
+</script>
+<script src="../motor/invitacion.js"></script>
+</body>
+</html>

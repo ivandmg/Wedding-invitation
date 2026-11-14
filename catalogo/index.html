@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brindis · Invitaciones web</title>
+<meta name="description" content="Invitaciones web interactivas para bodas, XV años, graduaciones, bautizos, cumpleaños y fiestas. Diseño personalizado, música, cuestionarios y confirmación de asistencia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Outfit:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#inicio">Brindis<span>.</span></a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#disenos">Diseños</a>
+      <a href="#funciones">Funciones</a>
+      <a href="#paquetes">Paquetes</a>
+      <a href="#extras">Extras</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn-wa btn-sm" data-wa="Hola, quiero información sobre las invitaciones web" href="#">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero-txt">
+      <p class="kicker">Invitaciones web · Bolivia</p>
+      <h1>Invitaciones que tus invitados <em>quieren abrir</em></h1>
+      <p class="lead">Una página web hecha solo para tu evento: con música, cuenta regresiva, ubicación, confirmación de asistencia y, si te animas, un cuestionario con un botón "No" que nadie puede presionar.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primario" href="#disenos">Ver diseños</a>
+        <a class="btn btn-borde" data-wa="Hola, quiero cotizar una invitación web" href="#">Cotizar por WhatsApp</a>
+      </div>
+      <ul class="hero-datos">
+        <li><strong>3 a 5 días</strong><span>de entrega</span></li>
+        <li><strong>Envíos</strong><span>ilimitados</span></li>
+        <li><strong>Sin apps</strong><span>se abre con un link</span></li>
+      </ul>
+    </div>
+    <div class="hero-fones" aria-hidden="true">
+      <div class="fone f1"><img src="img/xv-isabella.jpg" alt=""></div>
+      <div class="fone f2"><img src="img/boda-valeria-mateo.jpg" alt=""></div>
+      <div class="fone f3"><img src="img/cumple-tomas.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <!-- ============ DISEÑOS ============ -->
+  <section class="bloque" id="disenos">
+    <div class="bloque-in">
+      <p class="kicker">Catálogo</p>
+      <h2>Elige un diseño para tu evento</h2>
+      <p class="sub">Toca "Ver ejemplo" para abrir la invitación real, con datos inventados. Todos los colores, textos y secciones se adaptan a tu evento.</p>
+      <div class="filtros" role="tablist" id="filtros">
+        <button class="filtro on" data-f="todos">Todos</button>
+        <button class="filtro" data-f="boda">Bodas</button>
+        <button class="filtro" data-f="xv">XV años</button>
+        <button class="filtro" data-f="grado">Graduaciones</button>
+        <button class="filtro" data-f="bautizo">Bautizos</button>
+        <button class="filtro" data-f="cumple">Cumpleaños y fiestas</button>
+        <button class="filtro" data-f="std">Save the date</button>
+      </div>
+      <div class="disenos" id="listaDisenos"></div>
+    </div>
+  </section>
+
+  <!-- ============ SELLO: CUESTIONARIO ============ -->
+  <section class="bloque oscuro" id="cuestionario">
+    <div class="bloque-in split">
+      <div class="split-img"><div class="fone grande"><img src="img/cuestionario.jpg" alt="Cuestionario con el botón No escapando del cursor"></div></div>
+      <div class="split-txt">
+        <p class="kicker">Nuestro sello</p>
+        <h2>El botón "No" que nadie puede presionar</h2>
+        <p>Antes de confirmar, tus invitados responden un cuestionario divertido hecho a tu medida. La primera pregunta es "¿Quieres venir?" y el botón "No" se escapa del dedo o del mouse.</p>
+        <ul class="lista-check">
+          <li>Preguntas y respuestas escritas a tu estilo</li>
+          <li>Respuestas "trampa": si eligen vestido blanco en tu boda, su invitación queda "revocada" 😅</li>
+          <li>Al final, confeti y el formulario de confirmación</li>
+          <li>Las respuestas te llegan junto con la confirmación</li>
+        </ul>
+        <a class="btn btn-claro" href="demos/boda-valeria-mateo/index.html#confirmar">Probar el cuestionario</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INVITACIÓN PERSONAL ============ -->
+  <section class="bloque" id="personal">
+    <div class="bloque-in split invertido">
+      <div class="split-txt">
+        <p class="kicker">Invitación con nombre</p>
+        <h2>Cada invitado recibe su propio link</h2>
+        <p>Con los paquetes Completo y Premium, cada invitación muestra el nombre del invitado, cuántos pases tiene y su número de mesa. Con el Premium, además recibe un pase con código QR para mostrar en la entrada.</p>
+        <ul class="lista-check">
+          <li>"Para: Familia Gutiérrez · 4 pases · Mesa 7"</li>
+          <li>El formulario solo deja confirmar hasta el número de pases asignados</li>
+          <li>Te entregamos la lista de links lista para enviar por WhatsApp</li>
+        </ul>
+        <a class="btn btn-primario" href="demos/boda-valeria-mateo/index.html?para=Familia%20Guti%C3%A9rrez&amp;pases=4&amp;mesa=7">Ver como invitado</a>
+      </div>
+      <div class="split-img"><div class="fone grande"><img src="img/pase.jpg" alt="Pase personal con código QR, pases y número de mesa"></div></div>
+    </div>
+  </section>
+
+  <!-- ============ FUNCIONES ============ -->
+  <section class="bloque suave" id="funciones">
+    <div class="bloque-in">
+      <p class="kicker">Funciones</p>
+      <h2>Todo lo que puede tener tu invitación</h2>
+      <div class="funciones" id="listaFunciones"></div>
+    </div>
+  </section>
+
+  <!-- ============ PAQUETES ============ -->
+  <section class="bloque" id="paquetes">
+    <div class="bloque-in">
+      <p class="kicker">Paquetes</p>
+      <h2>Elige tu paquete</h2>
+      <div class="moneda" role="group" aria-label="Moneda">
+        <button class="on" data-m="bs">Bolivianos</button>
+        <button data-m="usd">Dólares</button>
+      </div>
+      <div class="planes" id="planes"></div>
+      <p class="reserva">Reserva tu fecha con <strong data-precio="150|20"></strong> y paga el resto cuando tu invitación esté lista.</p>
+
+      <h3 class="h3">Compara los paquetes</h3>
+      <div class="tabla-wrap">
+        <table class="tabla" id="tabla"></table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXTRAS ============ -->
+  <section class="bloque suave" id="extras">
+    <div class="bloque-in">
+      <p class="kicker">Servicios adicionales</p>
+      <h2>Agrega lo que necesites</h2>
+      <div class="extras" id="listaExtras"></div>
+
+      <div class="pronto">
+        <p class="kicker">Próximamente</p>
+        <h3>Panel de invitados en tiempo real</h3>
+        <p>Estamos preparando un panel donde verás al instante quién confirmó, quién no puede ir y quién está pendiente, con confirmación única por invitado, cierre automático en la fecha límite y lector de QR para la entrada. Mientras tanto, las confirmaciones llegan por WhatsApp o a una planilla de Google.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO FUNCIONA ============ -->
+  <section class="bloque" id="como">
+    <div class="bloque-in">
+      <p class="kicker">Cómo empezar</p>
+      <h2>Tu invitación en 4 pasos</h2>
+      <ol class="pasos">
+        <li><span>1</span><h3>Elige diseño y paquete</h3><p>Escríbenos por WhatsApp y reserva tu fecha.</p></li>
+        <li><span>2</span><h3>Envíanos tus datos</h3><p>Nombres, fecha, lugares, fotos, música y, si quieres, tus preguntas para el cuestionario.</p></li>
+        <li><span>3</span><h3>Revisa y ajusta</h3><p>Te mandamos el link para que la pruebes y pidas cambios.</p></li>
+        <li><span>4</span><h3>¡A enviar!</h3><p>Compártela por WhatsApp, Instagram o Facebook, sin límite de envíos.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ PREGUNTAS ============ -->
+  <section class="bloque suave" id="preguntas">
+    <div class="bloque-in angosto">
+      <p class="kicker">Preguntas frecuentes</p>
+      <h2>Lo que más nos preguntan</h2>
+      <div class="faq" id="faq"></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-final">
+    <div class="bloque-in">
+      <h2>¿Lista la fecha? Hagamos tu invitación</h2>
+      <p>Escríbenos y te ayudamos a elegir el diseño y el paquete ideal.</p>
+      <a class="btn btn-wa" data-wa="Hola, quiero hacer mi invitación web" href="#">Escribir por WhatsApp</a>
+      <p class="tel">+591 650 60795</p>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <p class="logo">Brindis<span>.</span></p>
+  <p>Invitaciones web para bodas, XV años, graduaciones, bautizos, cumpleaños y fiestas.</p>
+  <p class="peq">Los ejemplos de este catálogo usan nombres y datos inventados.</p>
+</footer>
+
+<a class="wa-flotante" data-wa="Hola, quiero información sobre las invitaciones web" href="#" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script src="catalogo.js"></script>
+</body>
+</html>

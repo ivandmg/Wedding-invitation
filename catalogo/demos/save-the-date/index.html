@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Save the date · Andrea & Lucas</title>
+<meta name="description" content="Save the date de ejemplo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../motor/invitacion.css">
+<style>
+:root {
+  --bg: #efe9e1;
+  --surface: #f8f5f0;
+  --ink: #1e1c1a;
+  --muted: #6d665e;
+  --accent: #1e1c1a;
+  --accent-ink: #f8f5f0;
+  --soft: #e4dcd1;
+  --line: #d6ccbf;
+  --hero-bg: #efe9e1;
+  --hero-ink: #1e1c1a;
+  --font-display: 'Italiana', Georgia, serif;
+  --font-script: 'Italiana', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+.hero h1 { letter-spacing: .02em; } .hero .fecha { font-size: 1.4rem; letter-spacing: .4em; }
+</style>
+</head>
+<body>
+<script>
+/* ====== DATOS DE LA INVITACIÓN (edita aquí) ====== */
+window.INV = {
+  "nombres": "Andrea & Lucas",
+  "iniciales": "A&L",
+  "fecha": "2028-02-12T17:00",
+  "fechaTexto": "12 · 02 · 2028",
+  "tituloCalendario": "Boda de Andrea & Lucas (save the date)",
+  "hero": {
+    "pre": "Save the date",
+    "tituloHTML": "Andrea <span class='amp'>&amp;</span> Lucas",
+    "sub": "Reserva la fecha. Invitación formal próximamente."
+  },
+  "arte": {
+    "tipo": "geometrico",
+    "colores": [
+      "#c4b6a4",
+      "#d6ccbf",
+      "#1e1c1a"
+    ]
+  },
+  "sobre": false,
+  "agendar": true,
+  "eventos": [
+    {
+      "tipo": "Dónde",
+      "icono": "anillos",
+      "lugar": "Viña del Valle",
+      "hora": "Sábado 12 de febrero de 2028",
+      "direccion": "Valle de Concepción, Tarija",
+      "inicio": "2028-02-12T17:00",
+      "duracionHoras": 8
+    }
+  ],
+  "confirmar": {
+    "etiqueta": "Pre-confirmación",
+    "whatsapp": "59165060795",
+    "maxPersonas": 2,
+    "textoGracias": "¡Gracias! Pronto recibirás la invitación formal."
+  },
+  "confeti": [
+    "#1e1c1a",
+    "#c4b6a4",
+    "#ffffff"
+  ],
+  "credito": {
+    "marca": "Brindis · Invitaciones web",
+    "link": "../../index.html"
+  },
+  "demo": {
+    "texto": "Invitación de ejemplo · datos inventados",
+    "volver": "../../index.html#disenos"
+  }
+};
+</script>
+<script src="../motor/invitacion.js"></script>
+</body>
+</html>
