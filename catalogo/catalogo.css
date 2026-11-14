@@ -1,16 +1,16 @@
 /* Brindis · catálogo
-   Concepto: papelería fina de celebración. Fondo crema cálido, tinta berenjena,
-   acento vino y dorado champán. Fraunces para títulos, Outfit para texto. */
+   Concepto: confianza y claridad. Blanco limpio con un toque celeste, tinta azul marino,
+   acento azul firme y celeste de apoyo. Fraunces para títulos, Outfit para texto. */
 :root {
-  --papel: #f6f1ea;
-  --papel-2: #efe7dc;
-  --blanco: #fffdf9;
-  --tinta: #221a24;
-  --gris: #6d6370;
-  --linea: #e3d8cb;
-  --vino: #7a2e4f;
-  --vino-2: #5e2140;
-  --oro: #c49a5a;
+  --papel: #f5f8fc;
+  --papel-2: #e8f0f9;
+  --blanco: #ffffff;
+  --tinta: #0f2440;
+  --gris: #56677e;
+  --linea: #d6e1ee;
+  --vino: #1d5fbf;
+  --vino-2: #164a95;
+  --oro: #6fb2f2;
   --wa: #1f9d55;
   --display: "Fraunces", Georgia, serif;
   --texto: "Outfit", system-ui, sans-serif;
@@ -39,7 +39,7 @@ h2 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.08; }
   cursor: pointer; transition: transform .2s, background .2s, box-shadow .2s;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn-primario { background: var(--vino); color: #fff; box-shadow: 0 10px 22px rgba(122,46,79,.25); }
+.btn-primario { background: var(--vino); color: #fff; box-shadow: 0 10px 22px rgba(29,95,191,.28); }
 .btn-primario:hover { background: var(--vino-2); }
 .btn-borde { border-color: var(--tinta); background: transparent; }
 .btn-claro { background: var(--blanco); color: var(--vino); }
@@ -63,7 +63,7 @@ h2 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.08; }
 .hero-datos strong { font-family: var(--display); font-size: 1.35rem; }
 .hero-datos span { color: var(--gris); font-size: .9rem; }
 .hero-fones { position: relative; height: 560px; }
-.fone { position: absolute; width: 230px; aspect-ratio: 390/800; border-radius: 34px; padding: 8px; background: var(--tinta); box-shadow: 0 30px 60px rgba(34,26,36,.25); }
+.fone { position: absolute; width: 230px; aspect-ratio: 390/800; border-radius: 34px; padding: 8px; background: var(--tinta); box-shadow: 0 30px 60px rgba(15,36,64,.22); }
 .fone img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 27px; }
 .fone.f1 { left: 2%; top: 60px; transform: rotate(-7deg); }
 .fone.f2 { left: 50%; top: 0; translate: -50% 0; z-index: 2; width: 250px; }
@@ -75,9 +75,9 @@ h2 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.08; }
 .bloque-in { max-width: 1160px; margin: 0 auto; text-align: center; }
 .bloque-in.angosto { max-width: 760px; }
 .bloque.suave { background: var(--papel-2); }
-.bloque.oscuro { background: var(--tinta); color: #f4eee8; }
+.bloque.oscuro { background: var(--tinta); color: #eef4fb; }
 .bloque.oscuro .kicker { color: var(--oro); }
-.bloque.oscuro p { color: #cfc3cc; }
+.bloque.oscuro p { color: #c3d2e6; }
 
 /* Filtros y diseños */
 .filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin: 2rem 0 2.5rem; }
@@ -120,8 +120,8 @@ h2 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.08; }
 .moneda button.on { background: var(--tinta); color: #fff; }
 .planes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; text-align: left; align-items: stretch; }
 .plan { background: var(--blanco); border: 1px solid var(--linea); border-radius: 26px; padding: 2rem 1.6rem; display: flex; flex-direction: column; gap: 1rem; position: relative; }
-.plan.destacado { background: var(--tinta); color: #f4eee8; border-color: var(--tinta); }
-.plan.destacado .gris { color: #cfc3cc; }
+.plan.destacado { background: var(--tinta); color: #eef4fb; border-color: var(--tinta); }
+.plan.destacado .gris { color: #c3d2e6; }
 .plan .badge { position: absolute; top: -12px; left: 1.6rem; background: var(--oro); color: var(--tinta); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .8rem; border-radius: 999px; }
 .plan h3 { font-size: 1.7rem; }
 .plan .gris { color: var(--gris); margin: 0; font-size: .95rem; }
@@ -142,7 +142,7 @@ h2 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.08; }
 .tabla td { text-align: center; }
 .tabla tr:last-child td { border-bottom: 0; }
 .tabla .si { color: var(--vino); font-weight: 700; }
-.tabla .no { color: #bdb2a8; }
+.tabla .no { color: #b3c1d3; }
 
 /* Extras */
 .extras { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin-top: 2.5rem; text-align: left; }
@@ -172,7 +172,7 @@ h2 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.08; }
 
 /* CTA final */
 .cta-final { background: var(--vino); color: #fff; padding: 5rem max(16px, env(safe-area-inset-right, 0px)) 5rem max(16px, env(safe-area-inset-left, 0px)); }
-.cta-final p { color: #f1dde6; margin: 1rem 0 2rem; }
+.cta-final p { color: #dbe8f8; margin: 1rem 0 2rem; }
 .cta-final .tel { margin: 1rem 0 0; font-weight: 600; letter-spacing: .05em; user-select: all; }
 
 .pie { text-align: center; padding: 3rem 16px 6rem; }
