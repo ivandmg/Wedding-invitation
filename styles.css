@@ -139,8 +139,9 @@ img { max-width: 100%; display: block; }
 .section-alt { max-width: none; background: #fff; }
 .section-alt > * { max-width: 1100px; margin-left: auto; margin-right: auto; }
 
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
-.reveal.visible { opacity: 1; transform: none; }
+.reveal { transform: translateY(24px); transition: transform .8s ease; }
+.reveal.visible { transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { transform: none; transition: none; } }
 
 /* Timeline */
 .timeline { position: relative; max-width: 720px; margin: 0 auto; text-align: left; }

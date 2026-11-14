@@ -351,8 +351,16 @@
       ...quiz.map((l) => `• ${l}`),
     ].filter((l) => l !== null).join("\n");
 
-    window.open(`https://wa.me/${B.whatsapp}?text=${encodeURIComponent(texto)}`, "_blank");
-    gracias(datos);
+    // Último paso: un enlace real a WhatsApp (los navegadores bloquean ventanas abiertas por script)
+    const url = `https://wa.me/${B.whatsapp}?text=${encodeURIComponent(texto)}`;
+    card.innerHTML = `
+      <div class="quiz-step centered">
+        <div class="quiz-icon good">✉</div>
+        <h3 class="quiz-q">Último paso</h3>
+        <p class="verdict-text">Toca el botón para enviarnos tu confirmación por WhatsApp. El mensaje ya va escrito.</p>
+        <a class="btn btn-primary" id="waLink" href="${url}" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+      </div>`;
+    $("#waLink").addEventListener("click", () => setTimeout(() => gracias(datos), 400));
   }
 
   function gracias(datos) {
