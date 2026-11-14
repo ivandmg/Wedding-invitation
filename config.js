@@ -4,12 +4,12 @@
    el resto de los archivos.
    ========================================================= */
 window.BODA = {
-  novia: "Sofía",
+  novia: "Carolina",
   novio: "Iván",
 
   // Fecha y hora de la ceremonia (formato: AAAA-MM-DDTHH:MM, hora local)
-  fecha: "2027-05-22T17:00",
-  fechaTexto: "Sábado 22 de mayo de 2027",
+  fecha: "2027-04-10T17:00",
+  fechaTexto: "Sábado 10 de abril de 2027",
 
   // Frase de portada
   frase: "Dos caminos que se encuentran para volverse uno solo.",
@@ -34,16 +34,16 @@ window.BODA = {
   ],
 
   ceremonia: {
-    lugar: "Parroquia de San Juan",
-    direccion: "Calle Principal 123, Centro",
+    lugar: "Local Volare",
+    direccion: "Dirección por confirmar",
     hora: "5:00 PM",
-    mapa: "https://maps.google.com/?q=Parroquia+de+San+Juan",
+    mapa: "https://maps.google.com/?q=Local+Volare",
   },
   recepcion: {
-    lugar: "Jardín Los Olivos",
-    direccion: "Camino Real 456",
+    lugar: "Local Volare",
+    direccion: "Dirección por confirmar",
     hora: "7:00 PM",
-    mapa: "https://maps.google.com/?q=Jardin+Los+Olivos",
+    mapa: "https://maps.google.com/?q=Local+Volare",
   },
 
   itinerario: [
@@ -66,7 +66,7 @@ window.BODA = {
   },
 
   // Fecha límite para confirmar
-  confirmarAntes: "1 de abril de 2027",
+  confirmarAntes: "1 de marzo de 2027",
 
   // A dónde llegan las confirmaciones:
   // - whatsapp: número con código de país, sin + ni espacios (ej. 5215512345678)
