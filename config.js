@@ -74,6 +74,14 @@ window.BODA = {
     ],
   },
 
+  // Música de fondo (video de YouTube). Empieza al tocar "Abrir invitación".
+  // youtube: el código que va después de "watch?v=" en el link del video.
+  musica: {
+    titulo: "Ordinary · Alex Warren",
+    youtube: "Q2NePVoGxYg",
+    inicio: 0, // segundo en el que empieza la canción
+  },
+
   // Fecha límite para confirmar
   confirmarAntes: "1 de marzo de 2027",
 

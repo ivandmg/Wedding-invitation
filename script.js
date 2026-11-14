@@ -109,7 +109,43 @@
   $("#abrir").onclick = () => {
     $("#sobre").classList.add("abierto");
     document.body.classList.remove("locked");
+    musica.play();
   };
+
+  /* ---------------- Música (YouTube) ---------------- */
+  const musica = (() => {
+    const cfg = B.musica;
+    const btn = $("#musicBtn");
+    let player = null, listo = false, quiere = false, sonando = false;
+    if (!cfg || !cfg.youtube) return { play() {} };
+
+    window.onYouTubeIframeAPIReady = () => {
+      player = new YT.Player("ytplayer", {
+        width: 1, height: 1, videoId: cfg.youtube,
+        playerVars: { controls: 0, disablekb: 1, playsinline: 1, start: cfg.inicio || 0 },
+        events: {
+          onReady: () => { listo = true; btn.hidden = false; if (quiere) play(); },
+          onStateChange: (e) => {
+            if (e.data === YT.PlayerState.ENDED) { player.seekTo(cfg.inicio || 0); player.playVideo(); }
+            sonando = e.data === YT.PlayerState.PLAYING;
+            btn.classList.toggle("on", sonando);
+            btn.setAttribute("aria-label", sonando ? "Pausar música" : "Reproducir música");
+          },
+        },
+      });
+    };
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+
+    function play() {
+      quiere = true;
+      if (listo) { player.unMute(); player.setVolume(60); player.playVideo(); }
+    }
+    btn.title = cfg.titulo || "Música";
+    btn.onclick = () => (sonando ? player.pauseVideo() : play());
+    return { play };
+  })();
 
   /* ---------------- Cuenta regresiva ---------------- */
   const target = new Date(B.fecha).getTime();

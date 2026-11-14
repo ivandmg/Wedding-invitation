@@ -295,3 +295,20 @@ img { max-width: 100%; display: block; }
   .quiz-progress-labels span:last-child { text-align: right; }
 }
 #confirmar, section { scroll-margin-top: 56px; }
+
+/* Música */
+#ytplayer, #ytplayer iframe { position: fixed; left: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.music-btn {
+  position: fixed; z-index: 90;
+  right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.6); background: var(--vino); color: #fff;
+  font-size: 1.4rem; cursor: pointer; box-shadow: 0 8px 20px rgba(139,46,63,.35);
+  display: grid; place-items: center;
+}
+.music-btn .music-icon { display: inline-block; }
+.music-btn.on .music-icon { animation: girar 3s linear infinite; }
+.music-btn:not(.on)::after { content: ""; position: absolute; width: 60%; height: 2px; background: #fff; transform: rotate(-45deg); }
+@keyframes girar { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .music-btn.on .music-icon { animation: none; } }
+.music-btn[hidden] { display: none; }
