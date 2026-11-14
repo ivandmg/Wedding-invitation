@@ -61,8 +61,16 @@ window.BODA = {
   regalos: {
     texto: "Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle con nosotros:",
     opciones: [
-      { nombre: "Transferencia bancaria", detalle: "Datos por confirmar", link: "" },
-      { nombre: "Lluvia de sobres", detalle: "El día del evento", link: "" },
+      { icono: "🎁", nombre: "Mesa de regalos", detalle: "En Multicenter, a nombre de Iván & Carolina.", link: "" },
+      {
+        icono: "💸",
+        nombre: "Regalo en efectivo",
+        detalle: "Escanea el QR desde la app de tu banco.",
+        qr: "fotos/qr-bnb.png",
+        titular: "Ivan Daniel Melgar Gumucio",
+        banco: "Banco Nacional de Bolivia (BNB)",
+        cuenta: "2503033073",
+      },
     ],
   },
 

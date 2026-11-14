@@ -5,11 +5,11 @@
   const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   /* ---------------- Rellenar datos ---------------- */
-  document.title = `${B.novia} & ${B.novio} · Nuestra Boda`;
+  document.title = `${B.novio} & ${B.novia} · Nuestra Boda`;
   $$("[data-novia]").forEach((e) => (e.textContent = B.novia));
   $$("[data-novio]").forEach((e) => (e.textContent = B.novio));
-  $$("[data-nombres]").forEach((e) => (e.textContent = `${B.novia} & ${B.novio}`));
-  $$("[data-iniciales]").forEach((e) => (e.textContent = `${B.novia[0]}&${B.novio[0]}`));
+  $$("[data-nombres]").forEach((e) => (e.textContent = `${B.novio} & ${B.novia}`));
+  $$("[data-iniciales]").forEach((e) => (e.textContent = `${B.novio[0]}&${B.novia[0]}`));
   $$("[data-fecha-texto]").forEach((e) => (e.textContent = B.fechaTexto));
   $$("[data-frase]").forEach((e) => (e.textContent = B.frase));
   $$("[data-vestimenta]").forEach((e) => (e.textContent = B.vestimenta));
@@ -76,11 +76,33 @@
 
   $("#gifts").innerHTML = B.regalos.opciones
     .map(
-      (g) => `<article class="card reveal"><div class="icon">🎁</div><h3>${esc(g.nombre)}</h3><p>${esc(g.detalle)}</p>${
-        g.link ? `<a class="btn btn-outline" href="${esc(g.link)}" target="_blank" rel="noopener">Ver</a>` : ""
-      }</article>`
+      (g) => `<article class="card gift reveal">
+        <div class="icon">${esc(g.icono || "🎁")}</div>
+        <h3>${esc(g.nombre)}</h3>
+        <p>${esc(g.detalle)}</p>
+        ${g.qr ? `<img class="qr" src="${esc(g.qr)}" alt="Código QR para regalo en efectivo">` : ""}
+        ${g.titular ? `<p class="small-print">${esc(g.titular)}<br>${esc(g.banco || "")}</p>` : ""}
+        ${g.cuenta ? `<p class="cuenta"><span>Cuenta</span> <strong>${esc(g.cuenta)}</strong></p>
+          <button class="btn btn-outline copiar" data-copy="${esc(g.cuenta)}">Copiar número de cuenta</button>` : ""}
+        ${g.link ? `<a class="btn btn-outline" href="${esc(g.link)}" target="_blank" rel="noopener">Ver</a>` : ""}
+      </article>`
     )
     .join("");
+  $$(".copiar").forEach((btn) => {
+    btn.onclick = async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy);
+        btn.textContent = "¡Copiado!";
+      } catch {
+        const r = document.createRange();
+        r.selectNodeContents(btn.previousElementSibling.querySelector("strong"));
+        getSelection().removeAllRanges();
+        getSelection().addRange(r);
+        btn.textContent = "Número seleccionado";
+      }
+      setTimeout(() => (btn.textContent = "Copiar número de cuenta"), 2000);
+    };
+  });
 
   /* ---------------- Sobre de entrada ---------------- */
   document.body.classList.add("locked");
