@@ -104,7 +104,7 @@ img { max-width: 100%; display: block; }
   background-size: cover; background-position: center;
   transform: scale(1.05);
 }
-.hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20,10,12,.45), rgba(20,10,12,.6)); }
+.hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20,10,12,.35), rgba(20,10,12,.65)); }
 .hero-content { position: relative; z-index: 1; max-width: 760px; }
 .hero-names {
   font-family: var(--serif); font-weight: 400;
@@ -151,6 +151,7 @@ img { max-width: 100%; display: block; }
 .tl-year { font-size: .72rem; letter-spacing: .25em; font-weight: 700; color: var(--vino); }
 .tl-item h3 { font-family: var(--serif); font-size: 1.4rem; margin: .1rem 0 .3rem; }
 .tl-item p { margin: 0; color: var(--muted); }
+.tl-foto { width: 100%; max-width: 420px; aspect-ratio: 4/3; object-fit: cover; border-radius: 14px; margin-top: 1rem; box-shadow: 0 10px 24px rgba(42,34,36,.12); }
 
 /* Galería */
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }

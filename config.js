@@ -17,20 +17,22 @@ window.BODA = {
   // Fotos: pon tus imágenes en la carpeta /fotos y escribe aquí sus nombres.
   // Si una foto no existe, se mostrará un recuadro elegante de reemplazo.
   fotoPortada: "fotos/portada.jpg",
+  // Cada foto puede ser "ruta.jpg" o { src: "ruta.jpg", pos: "30% center" } para elegir qué parte se ve
   galeria: [
-    "fotos/1.jpg",
-    "fotos/2.jpg",
-    "fotos/3.jpg",
-    "fotos/4.jpg",
-    "fotos/5.jpg",
-    "fotos/6.jpg",
+    "fotos/beso.jpg",
+    { src: "fotos/mirada.jpg", pos: "30% center" },
+    "fotos/anillo.jpg",
+    "fotos/portada.jpg",
+    "fotos/casual.jpg",
+    "fotos/propuesta.jpg",
   ],
 
+  // "foto" es opcional en cada momento
   historia: [
-    { anio: "2019", titulo: "Nos conocimos", texto: "Una fiesta a la que ninguno de los dos quería ir." },
-    { anio: "2021", titulo: "Primer viaje juntos", texto: "Descubrimos que viajamos igual de bien que nos perdemos." },
-    { anio: "2026", titulo: "La propuesta", texto: "Dijo que sí (y sin necesidad de cuestionario)." },
-    { anio: "2027", titulo: "¡Nos casamos!", texto: "Y queremos que estés ahí." },
+    { anio: "2019", titulo: "Nos conocimos", texto: "Y desde entonces, todo fue más bonito (y más divertido).", foto: "fotos/casual.jpg" },
+    { anio: "2021", titulo: "Nuestro día a día", texto: "Risas, comida y planes que siempre terminan en algo nuevo.", foto: "fotos/mirada.jpg", pos: "30% center" },
+    { anio: "2026", titulo: "La propuesta", texto: "Bajo los árboles, entre velas y flores. Dijo que sí (y sin necesidad de cuestionario).", foto: "fotos/propuesta.jpg" },
+    { anio: "2027", titulo: "¡Nos casamos!", texto: "Y queremos que estés ahí.", foto: "fotos/anillo.jpg" },
   ],
 
   ceremonia: {
@@ -59,8 +61,7 @@ window.BODA = {
   regalos: {
     texto: "Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle con nosotros:",
     opciones: [
-      { nombre: "Mesa de regalos Liverpool", detalle: "Evento #12345678", link: "" },
-      { nombre: "Transferencia bancaria", detalle: "CLABE 000 000 0000 0000 0000", link: "" },
+      { nombre: "Transferencia bancaria", detalle: "Datos por confirmar", link: "" },
       { nombre: "Lluvia de sobres", detalle: "El día del evento", link: "" },
     ],
   },
@@ -72,6 +73,6 @@ window.BODA = {
   // - whatsapp: número con código de país, sin + ni espacios (ej. 5215512345678)
   // - formspree: (opcional) URL de un formulario de https://formspree.io para recibirlas por correo.
   //   Si lo llenas, se usa en lugar de WhatsApp.
-  whatsapp: "5215500000000",
+  whatsapp: "59165060795",
   formspree: "",
 };

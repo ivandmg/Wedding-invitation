@@ -23,18 +23,24 @@
 
   // Historia
   $("#timeline").innerHTML = B.historia
-    .map((h) => `<div class="tl-item reveal"><span class="tl-year">${esc(h.anio)}</span><h3>${esc(h.titulo)}</h3><p>${esc(h.texto)}</p></div>`)
+    .map(
+      (h) => `<div class="tl-item reveal"><span class="tl-year">${esc(h.anio)}</span><h3>${esc(h.titulo)}</h3><p>${esc(h.texto)}</p>${
+        h.foto ? `<img class="tl-foto" src="${esc(h.foto)}" alt="${esc(h.titulo)}" loading="lazy" style="object-position:${esc(h.pos || "center")}" onerror="this.remove()">` : ""
+      }</div>`
+    )
     .join("");
 
   // Galería
   const gallery = $("#gallery");
-  B.galeria.forEach((src, i) => {
+  B.galeria.forEach((item, i) => {
+    const src = typeof item === "string" ? item : item.src;
     const fig = document.createElement("figure");
     fig.className = "reveal";
     const img = document.createElement("img");
     img.loading = "lazy";
     img.alt = `Foto ${i + 1}`;
     img.src = src;
+    if (item.pos) img.style.objectPosition = item.pos;
     img.onerror = () => {
       fig.innerHTML = `<div class="foto-placeholder">Tu foto aquí</div>`;
       fig.style.cursor = "default";
